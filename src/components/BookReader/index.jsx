@@ -29,10 +29,6 @@ export default function BookReader({bookData}) {
         setIsBookLoading(true);
 
 
-
-        const epubFile = 'https://react-reader.metabits.no/files/alice.epub'
-
-
         const viewer = document.querySelector('#viewer');
 
         // Link de um arquivo.epub: 'https://react-reader.metabits.no/files/alice.epub'
@@ -55,7 +51,7 @@ export default function BookReader({bookData}) {
         console.log(bookInfo);
 
         let itens = [];
-
+  
         book.navigation.toc.forEach((item) => {
             itens.push(<a key={item.id} className={styles.bookNav__item} onClick={() => {
                 // console.log(item);
