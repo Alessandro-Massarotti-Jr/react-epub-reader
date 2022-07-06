@@ -14,17 +14,7 @@ export default function Header() {
                 <ul>
                     <li>
                         <NavLink
-                            to="reader"
-                            className={({ isActive }) =>
-                                isActive ? `${styles.header__navLink} ${styles.active}` : `${styles.header__navLink}`
-                            }
-                        >
-                            Leitor
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to="example"
+                            to="/reader/example"
                             className={({ isActive }) =>
                                 isActive ? `${styles.header__navLink} ${styles.active}` : `${styles.header__navLink}`
                             }

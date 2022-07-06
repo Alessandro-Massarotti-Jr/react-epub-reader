@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 
 
 import Home from "./pages/Home"
-import Reader from './pages/Reader';
+import ReaderUrl from './pages/ReaderUrl';
 import ReaderExample from './pages/ReaderExample';
 
 
@@ -11,8 +11,9 @@ export default function Router() {
        
             <Routes>
                 <Route path="/" element={ <Home />}></Route>
-                <Route path="/reader" element={ <Reader />}></Route>
-                <Route path="/example" element={ <ReaderExample />}></Route>
+                <Route path="/reader/url" element={ <ReaderUrl />}></Route>
+                <Route path="/reader/file" element={ <ReaderUrl />}></Route>
+                <Route path="/reader/example" element={ <ReaderExample />}></Route>
             </Routes>
    
     );
