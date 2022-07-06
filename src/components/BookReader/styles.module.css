@@ -4,6 +4,7 @@
 
 .bookReader.loading{
     overflow: hidden;
+    height: 100vh;
 }
 
 .bookReader__header{

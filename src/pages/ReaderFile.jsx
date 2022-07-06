@@ -6,8 +6,6 @@ export default function ReaderFile() {
 
     const {fileBook,setFileBook} = useFileBook();
 
-console.log(fileBook);
-
     return (
         <>
             <BookReader bookData={fileBook} />

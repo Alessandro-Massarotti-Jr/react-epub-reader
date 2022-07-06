@@ -1,3 +1,11 @@
+.home{
+    background-color: var(--terciary);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 100vh;
+}
+
 .formContainer{
     width: 100%;
     display: flex;

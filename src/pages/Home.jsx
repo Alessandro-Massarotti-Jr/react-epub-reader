@@ -4,7 +4,7 @@ import styles from "./home.module.css"
 
 export default function Home() {
     return (
-        <>
+        <main className={styles.home}>
             <section className={styles.formContainer}>
                 <FormUrlBook />
                 <div className={styles.formContainer__descripition}>
@@ -20,6 +20,6 @@ export default function Home() {
                 </div>
             </section>
 
-        </>
+        </main>
     );
 }

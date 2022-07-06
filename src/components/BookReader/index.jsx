@@ -4,6 +4,7 @@ import { Book } from "epubjs";
 import { useEffect, useState } from "react";
 import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
 import { FaList } from "react-icons/fa";
+import Loading from "../Layout/Loading";
 
 
 export default function BookReader({bookData}) {
@@ -13,7 +14,7 @@ export default function BookReader({bookData}) {
     const [bookPercentage, setBookPercentage] = useState(0);
     const [bookNavigation, setBookNavigation] = useState([]);
     const [navigationIsOpen, setNavigationIsOpen] = useState(false);
-    const [isBookLoading, setIsBookLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
 
     function setNavigationIsOpenHandler() {
@@ -26,7 +27,7 @@ export default function BookReader({bookData}) {
 
 
     async function renderBook() {
-        setIsBookLoading(true);
+        setIsLoading(true);
 
 
         const viewer = document.querySelector('#viewer');
@@ -42,19 +43,17 @@ export default function BookReader({bookData}) {
 
         var displayed = await rendition.display();
 
-        console.log(book);
+       
 
         const bookInfo = book.packaging.metadata
 
         setBookTitle(bookInfo.title);
 
-        console.log(bookInfo);
 
         let itens = [];
   
         book.navigation.toc.forEach((item) => {
             itens.push(<a key={item.id} className={styles.bookNav__item} onClick={() => {
-                // console.log(item);
                 rendition.display(item.href).then(() => {
                     setBookPercentage(Math.floor(rendition.currentLocation().start.percentage * 100));
                     setNavigationIsOpen(false);
@@ -87,7 +86,7 @@ export default function BookReader({bookData}) {
                 setBookPercentage(Math.floor(rendition.currentLocation().start.percentage * 100));
             });
         }
-        setIsBookLoading(false);
+        setIsLoading(false);
     }
 
     useEffect(() => {
@@ -95,7 +94,8 @@ export default function BookReader({bookData}) {
     }, []);
 
     return (
-        <div className={`${styles.bookReader} ${isBookLoading && styles.loading}`}>
+        <div className={`${styles.bookReader} ${isLoading && styles.loading}`}>
+            {isLoading && <Loading/>}
             <div className={styles.bookReader__header}>
                 <div className={styles.bookReader__header__right}>
                     <FaList onClick={setNavigationIsOpenHandler} className={styles.bookReader__openNavButton} />
