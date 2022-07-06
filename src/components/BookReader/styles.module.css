@@ -73,3 +73,7 @@
 .bookNav__item:hover{
 background-color: var(--primary);
 }
+
+.bookField{
+    background-color: #ffffff;
+}

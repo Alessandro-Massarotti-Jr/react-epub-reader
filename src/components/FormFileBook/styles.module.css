@@ -1,0 +1,67 @@
+.fileForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    min-width: 300px;
+}
+
+.fileForm button {
+    border: none;
+    width: 100%;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: var(--terciary);
+    color: #ffffff;
+    transition: 0.3s ease-in-out;
+    border-radius: 3px;
+}
+
+.fileForm button:hover {
+    background-color: var(--primary);
+
+}
+
+.uploadIcon{
+    font-size: 20px;
+    margin:0 10px;
+}
+
+.inputFile {
+    position: relative;
+    bottom: 30px;
+    width: 100%;
+    margin:20px 0;
+}
+
+.inputFile label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--quaternary);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: 0.3s ease-in-out;
+}
+
+.inputFile label:hover{
+background-color: var(--terciary);
+}
+
+.inputFile input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    cursor: pointer;
+    opacity: 0;
+    padding: 10px 20px;
+    z-index: -1;
+}

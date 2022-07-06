@@ -113,7 +113,7 @@ export default function BookReader({bookData}) {
                 </div>
             }
             <div className={styles.bookReader__bookContainer}>
-                <div id="viewer"></div>;
+                <div className={styles.bookField} id="viewer"></div>;
             </div>
         </div>
     );

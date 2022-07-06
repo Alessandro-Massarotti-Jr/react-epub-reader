@@ -1,5 +1,8 @@
 :root{
-  --primary:#e00000;
+  --primary:#B33030 ;
+  --secondary:#000000;
+  --terciary: #950101;
+  --quaternary:#FF0000;
 }
 
 *{
