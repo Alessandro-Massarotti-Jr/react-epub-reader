@@ -5,7 +5,16 @@
   <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/alessandro-massarotti-Jr/react-epub-reader?color=e00000&style=flat-square">
 </p>
 
-## config
+Projeto desenvolvido com o intuito de ser um leitor de arquivos .epub(Ebooks) tanto de links externos quanto da maquina do proprio usuario
+
+## Sumario
+
+ - [Config](#config)
+ - [Links Uteis](#links-uteis)
+ - [Demonstração](#demonstração)
+ - [Comandos utilizados](#comandos-utilizados)
+
+## Config
 
 Run `npm install` to download project dependencies
 
@@ -24,7 +33,17 @@ Run `npm start` to start development server
 
 - [epubjs doc](http://epubjs.org/documentation/0.3/#locationsload)
 
-## comandos utilizados
+## Demonstração
+
+#### Production link: https://react-epub-reader.vercel.app/
+
+<div style="display:flex;" align="center">
+  <img width="30%" src="src/assets/images/prints/react-epub-reader-home.png" alt="HomePage">
+  <img width="30%" src="src/assets/images/prints/react-epub-reader-reader.png" alt="ReaderPage">
+  <img width="30%" src="src/assets/images/prints/react-epub-reader-reader-navopen.png" alt="ReaderPageNavOpen">
+</div>
+
+## Comandos utilizados
 
 `npm create-react-app`
 
