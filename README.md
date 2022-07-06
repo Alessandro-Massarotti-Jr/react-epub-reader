@@ -34,13 +34,6 @@ Run `npm start` to start development server
 
 `npm install react-icons`
 
-`npm install file-saver --save`
-
-`npm i express nodemon cors`
-
-`npm install dotenv`
-
-`npm install formidable`
 
 <br>
 
